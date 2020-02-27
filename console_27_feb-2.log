@@ -1,0 +1,548 @@
+//variables
+undefined
+undefined
+undefined
+var a = 10;
+undefined
+a
+10
+typeof(a);
+"number"
+typeof a;
+"number"
+typeof a
+"number"
+var b = 45.67;
+undefined
+typeof b;
+"number"
+var str = 'Hello Computer';
+undefined
+typeof str;
+"string"
+var str1 = "Hello String";
+undefined
+typeof str1;
+"string"
+var str2 = `Hello Backtick`;
+undefined
+typeof str2;
+"string"
+a
+10
+b
+45.67
+str
+"Hello Computer"
+typeof typeof a;
+"string"
+typeof a;
+"number"
+typeof "number";
+"string"
+a
+10
+a = 34.45;
+34.45
+a = 'Hello';
+"Hello"
+typeof a;
+"string"
+str1
+"Hello String"
+str1 = 234;
+234
+//number,string
+undefined
+var b = true;
+undefined
+typeof b;
+"boolean"
+//number,string,boolean
+undefined
+a =10;
+10
+b= 20;
+20
+a+b;
+30
+str
+"Hello Computer"
+str2
+"Hello Backtick"
+str1+str2;
+"234Hello Backtick"
+str+str2;
+"Hello ComputerHello Backtick"
+12+'fjlsd';
+"12fjlsd"
+12+"34";
+"1234"
+parseInt("34");
+34
+typeof parseInt("34");
+"number"
+parseFloat("34.25");
+34.25
+a
+10
+a.toString();
+"10"
+b
+20
+b = true;
+true
+b.toString();
+"true"
+true
+true
+true+true;
+2
+10+true+true;
+12
+10+true+true+false;
+12
+10+true-true+false;
+10
+str
+"Hello Computer"
+if(23>5){
+    console.log('True Condition');
+}
+VM2981:2 True Condition
+undefined
+if(23<5){
+    console.log('True Condition');
+}
+undefined
+if(23<5){
+    console.log('True Condition');
+}
+else{
+    console.log('False Condition');
+}
+VM3060:5 False Condition
+undefined
+a = 10;
+10
+if(a == 0){
+    console.log('A is zero');
+}
+else if(a>0){
+    console.log('A is Positive');
+}
+else{
+    console.log('A is Negative');
+}
+VM3423:5 A is Positive
+undefined
+a= -12;
+-12
+if(a == 0){
+    console.log('A is zero');
+}
+else if(a>0){
+    console.log('A is Positive');
+}
+else{
+    console.log('A is Negative');
+}
+VM3460:8 A is Negative
+undefined
+//Ternary Operator or Conditional Operator
+34>5 ? console.log('Greater') : console.log('Smaller');
+VM3669:2 Greater
+undefined
+a = 10;
+switch(a){
+    case 1:console.log('Number is One');
+        break;
+    case 2:console.log('Number is Two');
+        break;
+    case 3:console.log('Number is Three');
+        break;
+    default:console.log('Number is Default');
+        break;
+}
+VM3973:9 Number is Default
+undefined
+a = 1;
+switch(a){
+    case 1:console.log('Number is One');
+        break;
+    case 2:console.log('Number is Two');
+        break;
+    case 3:console.log('Number is Three');
+        break;
+    default:console.log('Number is Default');
+        break;
+}
+VM3981:3 Number is One
+undefined
+a = 1;
+switch(a){
+    case 1:console.log('Number is One');
+        
+    case 2:console.log('Number is Two');
+        break;
+    case 3:console.log('Number is Three');
+        break;
+    default:console.log('Number is Default');
+        break;
+}
+VM4045:3 Number is One
+VM4045:5 Number is Two
+undefined
+i=1;
+while(i<5){
+    console.log('Hello ',i);
+    i++;
+}
+VM4209:3 Hello  1
+VM4209:3 Hello  2
+VM4209:3 Hello  3
+VM4209:3 Hello  4
+4
+i=1;
+do{
+    console.log('Hello ',i);
+    i++;
+}while(i<5);
+VM4243:3 Hello  1
+VM4243:3 Hello  2
+VM4243:3 Hello  3
+VM4243:3 Hello  4
+4
+str
+"Hello Computer"
+str.length;
+14
+str[3]
+"l"
+str[0]
+"H"
+for(var i=0;i<str.length;i++){
+    console.log(str[i]);
+}
+VM4516:2 H
+VM4516:2 e
+VM4516:2 l
+VM4516:2 l
+VM4516:2 o
+VM4516:2  
+VM4516:2 C
+VM4516:2 o
+VM4516:2 m
+VM4516:2 p
+VM4516:2 u
+VM4516:2 t
+VM4516:2 e
+VM4516:2 r
+undefined
+//for -of Loop
+undefined
+for(var item of str){
+    console.log(item);
+}
+VM4727:2 H
+VM4727:2 e
+VM4727:2 l
+VM4727:2 l
+VM4727:2 o
+VM4727:2  
+VM4727:2 C
+VM4727:2 o
+VM4727:2 m
+VM4727:2 p
+VM4727:2 u
+VM4727:2 t
+VM4727:2 e
+VM4727:2 r
+undefined
+str.bold();
+"<b>Hello Computer</b>"
+str.anchor();
+"<a name="undefined">Hello Computer</a>"
+str.anchor('www.facebok.com');
+"<a name="www.facebok.com">Hello Computer</a>"
+str.charAt(2);
+"l"
+str.charAt(23);
+""
+str.charCodeAt();
+72
+str.charCodeAt(1);
+101
+str.concat(' JS');
+"Hello Computer JS"
+str
+"Hello Computer"
+temp = str.concat(' from Js');
+"Hello Computer from Js"
+temp
+"Hello Computer from Js"
+str
+"Hello Computer"
+//immutable string
+undefined
+str.includes('Com');
+true
+str.includes('com');
+false
+str.includes('C');
+true
+str.includes('C',0);
+true
+str
+"Hello Computer"
+str.includes('C',7);
+false
+str.indexOf('C');
+6
+str.indexOf('');
+0
+str.indexOf('C',7);
+-1
+str
+"Hello Computer"
+str.indexOf('e');
+1
+str.lastIndexOf('e');
+12
+str.localeCompare(str);
+0
+str.localeCompare("VIkrant");
+-1
+str.localeCompare("Adroit");
+1
+str.replace('e','#');
+"H#llo Computer"
+str.replace('e','#jk');
+"H#jkllo Computer"
+str.slice();
+"Hello Computer"
+str.slice(0);
+"Hello Computer"
+str.slice(5);
+" Computer"
+str.slice(3,9);
+"lo Com"
+str
+"Hello Computer"
+str.substr();
+"Hello Computer"
+str.substr(3);
+"lo Computer"
+str.substr(3,5);
+"lo Co"
+str.substr(3,2);
+"lo"
+str.substring(3,9);
+"lo Com"
+str.toLowerCase();
+"hello computer"
+str.toUpperCase();
+"HELLO COMPUTER"
+str = "    Hello Computer   ";
+"    Hello Computer   "
+str.trim();
+"Hello Computer"
+str.trimEnd();
+"    Hello Computer"
+str.trimRight();
+"    Hello Computer"
+str.trimStart();
+"Hello Computer   "
+str.trimLeft();
+"Hello Computer   "
+str.valueOf
+ƒ valueOf() { [native code] }
+str.valueOf();
+"    Hello Computer   "
+str = str.trim();
+"Hello Computer"
+str.endsWith('ter');
+true
+str.startsWith('Hel')
+true
+str.startsWith('Hel2')
+false
+str.startsWith('S') && str.endsWith('Y');
+false
+str.endsWith('te',13);
+true
+str
+"Hello Computer"
+arr = [12,23,34,51,26];
+(5) [12, 23, 34, 51, 26]0: 121: 232: 343: 514: 26length: 5__proto__: Array(0)
+arr.length;
+5
+arr.push(100);
+6
+arr
+(6) [12, 23, 34, 51, 26, 100]
+arr.push(200,300,400);
+9
+arr
+(9) [12, 23, 34, 51, 26, 100, 200, 300, 400]
+arr.unshift(100);
+10
+arr.unshift(200,300,400);
+13
+arr
+(13) [200, 300, 400, 100, 12, 23, 34, 51, 26, 100, 200, 300, 400]
+arr.pop();
+400
+arr
+(12) [200, 300, 400, 100, 12, 23, 34, 51, 26, 100, 200, 300]0: 2001: 3002: 4003: 1004: 125: 236: 347: 518: 269: 10010: 20011: 300length: 12__proto__: Array(0)
+arr.shift();
+200
+arr
+(11) [300, 400, 100, 12, 23, 34, 51, 26, 100, 200, 300]0: 3001: 4002: 1003: 124: 235: 346: 517: 268: 1009: 20010: 300length: 11__proto__: Array(0)
+arr.includes(400);
+true
+arr.includes(400,5);
+false
+arr1 = [34,23,45,61,true,false,true,']
+VM10183:1 Uncaught SyntaxError: Invalid or unexpected token
+arr1 = [34,23,45,61,true,false,true,'Hello','Computer'];
+(9) [34, 23, 45, 61, true, false, true, "Hello", "Computer"]0: 341: 232: 453: 614: true5: false6: true7: "Hello"8: "Computer"length: 9__proto__: Array(0)
+arr
+(11) [300, 400, 100, 12, 23, 34, 51, 26, 100, 200, 300]
+arr.pop();
+300
+arr
+(10) [300, 400, 100, 12, 23, 34, 51, 26, 100, 200]
+arr.reverse();
+(10) [200, 100, 26, 51, 34, 23, 12, 100, 400, 300]
+arr
+(10) [200, 100, 26, 51, 34, 23, 12, 100, 400, 300]
+//object literal Form
+var obj = {
+    id:101,
+    name:'VIkrant',
+    age:23
+}
+undefined
+obj
+{id: 101, name: "VIkrant", age: 23}id: 101name: "VIkrant"age: 23__proto__: Object
+obj.address = 'Rohini';
+"Rohini"
+obj
+{id: 101, name: "VIkrant", age: 23, address: "Rohini"}id: 101name: "VIkrant"age: 23address: "Rohini"__proto__: Object
+delete obj.age;
+true
+obj
+{id: 101, name: "VIkrant", address: "Rohini"}
+arr
+(10) [200, 100, 26, 51, 34, 23, 12, 100, 400, 300]
+for(var item of arr){
+    console.log(item);
+}
+VM11195:2 200
+VM11195:2 100
+VM11195:2 26
+VM11195:2 51
+VM11195:2 34
+VM11195:2 23
+VM11195:2 12
+VM11195:2 100
+VM11195:2 400
+VM11195:2 300
+undefined
+obj
+{id: 101, name: "VIkrant", address: "Rohini"}
+obj.id
+101
+obj['id']
+101
+for(var item in obj){
+    console.log(item);
+}
+VM11471:2 id
+VM11471:2 name
+VM11471:2 address
+undefined
+for(var key in obj){
+    console.log(key,obj.key);
+}
+VM11698:2 id undefined
+VM11698:2 name undefined
+VM11698:2 address undefined
+undefined
+for(var key in obj){
+    console.log(key,obj['key']);
+}
+VM11778:2 id undefined
+VM11778:2 name undefined
+VM11778:2 address undefined
+undefined
+for(var key in obj){
+    console.log(key,obj[key]);
+}
+VM11799:2 id 101
+VM11799:2 name VIkrant
+VM11799:2 address Rohini
+undefined
+for(var key in obj){
+    console.log(typeof key);
+}
+VM11882:2 string
+VM11882:2 string
+VM11882:2 string
+undefined
+obj.hobbies = ['Playing','Coding','Badminton'];
+(3) ["Playing", "Coding", "Badminton"]
+obj
+{id: 101, name: "VIkrant", address: "Rohini", hobbies: Array(3)}id: 101name: "VIkrant"address: "Rohini"hobbies: (3) ["Playing", "Coding", "Badminton"]0: "Playing"1: "Coding"2: "Badminton"length: 3__proto__: Array(0)__proto__: Object
+var userObject = {};
+undefined
+userObject
+{}
+userObject.id = 102
+102
+userObject
+{id: 102}id: 102__proto__: Object
+//without return type and without argument
+undefined
+function demo(){
+    console.log('No return No argument');
+}
+undefined
+demo();
+VM12756:2 No return No argument
+undefined
+//without return type and with argument
+undefined
+function demo(a,b){
+    console.log('No return With argument ',a,b);
+}
+undefined
+demo(2,3);
+VM13126:2 No return With argument  2 3
+undefined
+//with return type and with argument
+undefined
+function demo(a,b){
+    console.log('No return With argument ',a,b);
+    return a+b;
+}
+undefined
+function demo(a,b){
+    console.log('With return With argument ',a,b);
+    return a+b;
+}
+undefined
+demo(2,3);
+VM13266:2 With return With argument  2 3
+5
+//with return type and No argument
+undefined
+function demo(){
+    console.log('With return With argument ');
+    return 10;
+}
+undefined
+demo();
+VM13389:2 With return With argument 
+10
