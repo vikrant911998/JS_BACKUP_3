@@ -1,0 +1,17 @@
+Programming Types or Paradigms
+
+C ->Procedural Programming(GCC Compiler)
+C++ -> Object Oriented Programming(Not Pure OOPS)(G++ Compiler)
+Java -> OOPS(Pure OOPS) -> Main function reside inside the Class.(JAVAC JVM)
+
+->Functional Programming(Function passing as an argument)
+
+Javascript-> Procedural ,OOPS, Functional(V8 engine)(Interpreted Language)
+
+->Core part
+->DOM(Document Object Model) part
+
+JS Code -> C++ -> Binary
+
+NodeJS, Rhino ,Google Chrome (inspect element->console)
+
