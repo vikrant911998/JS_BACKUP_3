@@ -1,0 +1,586 @@
+//Types to create function in JS
+undefined
+// 1.Function Declaration Style
+undefined
+function show(){
+    console.log('Function Declaration Style');
+}
+undefined
+show();
+VM513:2 Function Declaration Style
+undefined
+// 2.Anonymous Style
+undefined
+var print = function(){
+    console.log('Anonymous Style');
+}
+undefined
+print();
+VM753:2 Anonymous Style
+undefined
+// 3.Arrow Function Style
+undefined
+var demo = ()=>{
+    console.log('Arrow Function Style');
+}
+undefined
+demo();
+VM985:2 Arrow Function Style
+undefined
+var demo = ()=>console.log('Arrow Function');
+undefined
+demo();
+VM1173:1 Arrow Function
+undefined
+var demo = ()=>{
+    console.log('Arrow Function Style');
+}
+undefined
+var demo = ()=>{
+    console.log('Arrow Function Style');
+    return 34;
+}
+undefined
+demo();
+VM1241:2 Arrow Function Style
+34
+var demo = ()=>34;
+undefined
+demo();
+34
+//function arguments
+undefined
+show();
+VM513:2 Function Declaration Style
+undefined
+function show(a,b){
+    console.log('values are ',a,b);
+}
+undefined
+show(2,3);
+VM1633:2 values are  2 3
+undefined
+show();
+VM1633:2 values are  undefined undefined
+undefined
+show(2,3,4,5,6,7,8);
+VM1633:2 values are  2 3
+undefined
+console.dir(show);
+VM1902:1 ƒ show(a,b)length: 2name: "show"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM1633:1[[Scopes]]: Scopes[1]
+undefined
+function show(a,b){
+    console.log('Values are ',a,b,arguments);
+}
+undefined
+show();
+VM2102:2 Values are  undefined undefined Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]length: 0callee: ƒ show(a,b)Symbol(Symbol.iterator): ƒ values()__proto__: Objectconstructor: ƒ Object()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()hasOwnProperty: ƒ hasOwnProperty()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toString: ƒ toString()valueOf: ƒ valueOf()toLocaleString: ƒ toLocaleString()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+undefined
+show(2,3,45,16,17,81);
+VM2102:2 Values are  2 3 Arguments(6) [2, 3, 45, 16, 17, 81, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+function show(){
+    console.log(arguments);
+}
+undefined
+show();
+VM2415:2 Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+show(1);
+VM2415:2 Arguments [1, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+show(1,73,34,9,true,'Hello');
+VM2415:2 Arguments(6) [1, 73, 34, 9, true, "Hello", callee: ƒ, Symbol(Symbol.iterator): ƒ]0: 11: 732: 343: 94: true5: "Hello"length: 6callee: ƒ show()Symbol(Symbol.iterator): ƒ values()__proto__: Object
+undefined
+function show(){
+    console.log(arguments instanceof Array);
+}
+undefined
+show();
+VM2594:2 false
+undefined
+function show(){
+    console.log(arguments instanceof Object);
+}
+undefined
+show();
+VM2688:2 true
+undefined
+function show(){
+    for(var item in arguments){
+        console.log(item);
+    }
+}
+undefined
+show(2,3,45,16,17,81);
+VM2886:3 0
+VM2886:3 1
+VM2886:3 2
+VM2886:3 3
+VM2886:3 4
+VM2886:3 5
+undefined
+function show(){
+    for(var item in arguments){
+        console.log(item,arguments[item]);
+    }
+}
+undefined
+show(2,3,45,16,17,81);
+VM3023:3 0 2
+VM3023:3 1 3
+VM3023:3 2 45
+VM3023:3 3 16
+VM3023:3 4 17
+VM3023:3 5 81
+undefined
+function show(){
+    for(var item of arguments){
+        console.log(item);
+    }
+}
+undefined
+show(2,3,45,16,17,81);
+VM3116:3 2
+VM3116:3 3
+VM3116:3 45
+VM3116:3 16
+VM3116:3 17
+VM3116:3 81
+undefined
+function show(){
+    for(var item of arguments){
+        console.log(item,arguments[item]);
+    }
+}
+undefined
+show(2,3,45,16,17,81);
+VM3288:3 2 45
+VM3288:3 3 16
+VM3288:3 45 undefined
+VM3288:3 16 undefined
+VM3288:3 17 undefined
+VM3288:3 81 undefined
+undefined
+//Rest Parameter
+function show(a,b,...args){
+    console.log(a,b,args);
+}
+undefined
+show(2,3,45,16,17,81);
+VM3652:3 2 3 (4) [45, 16, 17, 81]0: 451: 162: 173: 81length: 4__proto__: Array(0)
+undefined
+show([2000,300,100],3,45,16,17,81);
+VM3652:3 (3) [2000, 300, 100]0: 20001: 3002: 100length: 3__proto__: Array(0) 3 (4) [45, 16, 17, 81]0: 451: 162: 173: 81length: 4__proto__: Array(0)
+undefined
+function getAddition(...n){
+    var sum = 0;
+    
+    for(var item of n){
+        
+        if(typeof item == 'number'){
+            sum = sum+item;
+        }
+
+        if(typeof item == 'string'){
+            sum = sum + parseInt(item);
+        }
+    }
+
+
+}
+undefined
+function getAddition(...n){
+    var sum = 0;
+    
+    for(var item of n){
+        
+        if(typeof item == 'number'){
+            sum = sum+item;
+        }
+
+        if(typeof item == 'string'){
+            sum = sum + parseInt(item);
+        }
+    }
+
+    
+    return sum;
+}
+undefined
+getAddition(2,3,4,61);
+70
+function getAddition(...n){
+    var sum = 0;
+    
+    for(var item of n){
+            sum = sum+item;
+        
+
+        if(typeof item == 'string'){
+            sum = sum + parseInt(item);
+        }
+    }
+
+    
+    return sum;
+}
+undefined
+getAddition(2,3,4,61);
+70
+getAddition(2,3,4,61,'23');
+"702323"
+function getAddition(...n){
+    var sum = 0;
+    
+    for(var item of n){
+
+        if(typeof item == 'string'){
+            sum = sum + parseInt(item);
+        }
+        else{
+            sum = sum+item;
+        }
+    }
+
+    
+    return sum;
+}
+undefined
+getAddition(2,3,4,61,'23');
+93
+getAddition('45',2,3,4,61,'23');
+138
+parseInt('Hello')
+NaN
+function getAddition(...n){
+    var sum = 0;
+    
+    for(var item of n){
+
+        if(typeof item == 'string'){
+            if( parseInt(item) != NaN){
+                sum = sum +parseInt(item);
+                }
+        }
+        else{
+            sum = sum+item;
+        }
+    }
+
+    
+    return sum;
+}
+undefined
+parseInt('Hello') == NaN;
+false
+typeof parseInt('Hello')
+"number"
+arr= [12,3,51,61,25];
+(5) [12, 3, 51, 61, 25]
+typeof arr;
+"object"
+//function definition inside another function;
+undefined
+function Outer(){
+    
+    function inner(){
+        console.log('Inner Function Inside Outer Function');
+    }
+    return 34;
+}
+undefined
+Outer();
+34
+function Outer(){
+    
+    function inner(){
+        console.log('Inner Function Inside Outer Function');
+    }
+    return inner;
+}
+undefined
+temp = Outer();
+ƒ inner(){
+        console.log('Inner Function Inside Outer Function');
+    }
+temp
+ƒ inner(){
+        console.log('Inner Function Inside Outer Function');
+    }
+temp();
+VM6121:4 Inner Function Inside Outer Function
+undefined
+function Outer(){
+    
+    function inner1(){
+        console.log('Inner Function One');
+    }
+    
+    function inner2(){
+        console.log('Inner Function Two');
+    }
+
+    function inner3(){
+        console.log('Inner Function Three');
+    }
+
+    return [inner1,inner2,inner3];
+}
+undefined
+temp = Outer();
+(3) [ƒ, ƒ, ƒ]0: ƒ inner1()1: ƒ inner2()2: ƒ inner3()length: 3__proto__: Array(0)
+temp[0];
+ƒ inner1(){
+        console.log('Inner Function One');
+    }
+temp[1];
+ƒ inner2(){
+        console.log('Inner Function Two');
+    }
+temp[0]();
+VM6524:4 Inner Function One
+undefined
+t = temp[0];
+ƒ inner1(){
+        console.log('Inner Function One');
+    }
+t();
+VM6524:4 Inner Function One
+undefined
+temp
+(3) [ƒ, ƒ, ƒ]
+temp[0];
+ƒ inner1(){
+        console.log('Inner Function One');
+    }
+//returning an object
+undefined
+function Outer(){
+    
+    function inner1(){
+        console.log('Inner Function One');
+    }
+    
+    function inner2(){
+        console.log('Inner Function Two');
+    }
+
+    function inner3(){
+        console.log('Inner Function Three');
+    }
+
+    var object = {one:inner1,two:inner2,three:inner3};
+
+    return object;
+}
+undefined
+temp = Outer();
+{one: ƒ, two: ƒ, three: ƒ}one: ƒ inner1()two: ƒ inner2()three: ƒ inner3()__proto__: Object
+temp.one();
+VM7182:4 Inner Function One
+undefined
+temp.two();
+VM7182:8 Inner Function Two
+undefined
+function Outer(){
+    
+    function inner1(){
+        console.log('Inner Function One');
+    }
+    
+    function inner2(){
+        console.log('Inner Function Two');
+    }
+
+    function inner3(){
+        console.log('Inner Function Three');
+    }
+
+    
+
+    return {inner1,inner2,inner3};
+}
+undefined
+temp = Outer();
+{inner1: ƒ, inner2: ƒ, inner3: ƒ}inner1: ƒ inner1()inner2: ƒ inner2()inner3: ƒ inner3()__proto__: Object
+function Calculator(){
+    function addition(){
+        console.log('Addition');
+    }
+    function subtraction(){
+        console.log('Subtraction');
+    }
+
+    return {addition,subtraction};
+}
+undefined
+temp = Outer();
+{inner1: ƒ, inner2: ƒ, inner3: ƒ}
+temp = Calculator();
+{addition: ƒ, subtraction: ƒ}
+//functional argument,Rest Parameter , Function Definition inside another function and returning object.
+undefined
+//function passing as an argument
+undefined
+function take(a){
+    console.log(a);
+}
+undefined
+take(23);
+VM9031:2 23
+undefined
+take([23,41,true]);
+VM9031:2 (3) [23, 41, true]
+undefined
+take({id:101,name:'Vikrant'});
+VM9031:2 {id: 101, name: "Vikrant"}
+undefined
+demo
+()=>34
+take(demo);
+VM9031:2 ()=>34
+undefined
+function take( function_1 ){
+    console.log('Inside Take Function');
+    function_1();
+}
+undefined
+function print(){
+    console.log('Print Function')
+}
+undefined
+take(print);
+VM9429:2 Inside Take Function
+VM9542:2 Print Function
+undefined
+// closure
+undefined
+function Outer(){
+    var a = 10;
+
+    function inner(){
+        console.log(a+10);
+    }
+    
+    return inner;
+}
+undefined
+temp = Outer();
+ƒ inner(){
+        console.log(a+10);
+    }
+temp();
+VM10745:5 20
+undefined
+function Outer(x){
+    
+    function inner(y){
+        console.log(x+y);
+    }
+    
+    return inner; 
+}
+undefined
+temp = Outer(10);
+ƒ inner(y){
+        console.log(x+y);
+    }
+temp(20);
+VM11076:4 30
+undefined
+var count = 0;
+undefined
+var count = 1;
+undefined
+function increase(){
+    console.log(count);
+    count++;
+}
+undefined
+increase();
+VM11479:2 1
+undefined
+increase();
+VM11479:2 2
+undefined
+increase();
+VM11479:2 3
+undefined
+increase();
+VM11479:2 4
+undefined
+count
+5
+count = -3456;
+-3456
+increase();
+VM11479:2 -3456
+undefined
+increase();
+VM11479:2 -3455
+undefined
+increase();
+VM11479:2 -3454
+undefined
+increase();
+VM11479:2 -3453
+undefined
+function Counter(){
+    var count = 1;
+
+    function increase_counter(){
+        console.log(count);
+    }
+    return increase_counter;
+}
+undefined
+temp = Counter();
+ƒ increase_counter(){
+        console.log(count);
+    }
+temp();
+VM11813:5 1
+undefined
+temp();
+VM11813:5 1
+undefined
+function Counter(){
+    var count = 1;
+
+    function increase_counter(){
+        console.log(count);
+    }
+    return increase_counter;
+}
+undefined
+function Counter(){
+    var count = 1;
+
+    function increase_counter(){
+        console.log(count);
+        count++;
+    }
+    return increase_counter;
+}
+undefined
+temp = Counter();
+ƒ increase_counter(){
+        console.log(count);
+        count++;
+    }
+temp();
+VM11928:5 1
+undefined
+temp();
+VM11928:5 2
+undefined
+temp();
+VM11928:5 3
+undefined
+temp();
+VM11928:5 4
+undefined
+temp();
+VM11928:5 5
+undefined

@@ -1,0 +1,380 @@
+function Counter(){
+    var count = 1;
+
+    function increase_counter(){
+        console.log(count);
+        count++;
+    }
+    return increase_counter;
+}
+undefined
+temp = Counter();
+ƒ increase_counter(){
+        console.log(count);
+        count++;
+    }
+temp();
+VM442:5 1
+undefined
+temp();
+VM442:5 2
+undefined
+temp();
+VM442:5 3
+undefined
+temp();
+VM442:5 4
+undefined
+temp();
+VM442:5 5
+undefined
+Counter
+ƒ Counter(){
+    var count = 1;
+
+    function increase_counter(){
+        console.log(count);
+        count++;
+    }
+    return increase_counter;
+}
+Counter = 10;
+10
+typeof Counter;
+"number"
+Counter();
+VM716:1 Uncaught TypeError: Counter is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM716:1
+//IIFE(Immediate Invoke Function Expression)
+
+
+undefined
+temp = (function(){
+    var count = 1;
+
+    function increase_counter(){
+        console.log(count);
+        count++;
+    }
+    return increase_counter;
+})();
+ƒ increase_counter(){
+        console.log(count);
+        count++;
+    }
+temp
+ƒ increase_counter(){
+        console.log(count);
+        count++;
+    }
+temp();
+VM1033:5 1
+undefined
+temp();
+VM1033:5 2
+undefined
+temp();
+VM1033:5 3
+undefined
+temp();
+VM1033:5 4
+undefined
+temp();
+VM1033:5 5
+undefined
+temp();
+VM1033:5 6
+undefined
+temp();
+VM1033:5 7
+undefined
+function show(a){
+    console.log(a);    
+}
+undefined
+arr = [12,23,34,51,26];
+(5) [12, 23, 34, 51, 26]
+for(var item of arr){
+    console.log(item);
+}
+VM1489:2 12
+VM1489:2 23
+VM1489:2 34
+VM1489:2 51
+VM1489:2 26
+undefined
+arr.forEach(show);
+VM1330:2 12
+VM1330:2 23
+VM1330:2 34
+VM1330:2 51
+VM1330:2 26
+undefined
+arr.forEach( function(_argument){
+    console.log(_argument);
+} );
+VM1826:2 12
+VM1826:2 23
+VM1826:2 34
+VM1826:2 51
+VM1826:2 26
+undefined
+arr.length
+5
+arr.find( function(a){
+    return a==100;
+} );
+undefined
+arr.find( function(a){
+    return a==51;
+} );
+51
+arr.findIndex( function(){
+    
+} );
+-1
+arr.findIndex( function(a){
+    return a==51;
+} );
+3
+arr
+(5) [12, 23, 34, 51, 26]
+arr.push(12);
+6
+arr.push(120);
+7
+arr.push(12);
+8
+arr
+(8) [12, 23, 34, 51, 26, 12, 120, 12]0: 121: 232: 343: 514: 265: 126: 1207: 12length: 8__proto__: Array(0)
+arr.filter( function(a){
+    return a==12;
+} );
+(3) [12, 12, 12]
+arr.filter( function(a){
+    return a==12;
+} ).length;
+3
+arr.includes(12,4);
+true
+arr.includes(51,4);
+false
+arr.includes(51);
+true
+arr.slice(3,5);
+(2) [51, 26]
+arr
+(8) [12, 23, 34, 51, 26, 12, 120, 12]
+arr.splice(4,1,100,200);
+[26]
+arr
+(9) [12, 23, 34, 51, 100, 200, 12, 120, 12]
+arr.splice(4,2);
+(2) [100, 200]
+arr
+(7) [12, 23, 34, 51, 12, 120, 12]
+arr.reverse();
+(7) [12, 120, 12, 51, 34, 23, 12]
+arr
+(7) [12, 120, 12, 51, 34, 23, 12]
+arr.sort( function(a,b){
+    return a-b;
+} );
+(7) [12, 12, 12, 23, 34, 51, 120]
+arr.sort();
+(7) [12, 12, 12, 120, 23, 34, 51]
+arr.sort( function(a,b){
+    return a+b;
+} );
+(7) [12, 12, 12, 120, 23, 34, 51]
+arr.sort( function(a,b){
+    return b-a;
+} );
+(7) [120, 51, 34, 23, 12, 12, 12]
+arr.map( function(a){
+    return a+5
+} );
+(7) [125, 56, 39, 28, 17, 17, 17]
+arr
+(7) [120, 51, 34, 23, 12, 12, 12]
+//spread operator(...)
+undefined
+arr
+(7) [120, 51, 34, 23, 12, 12, 12]
+arr1 = [34,23,45,61,true,false,true]
+(7) [34, 23, 45, 61, true, false, true]
+arr2 = [arr,arr1];
+(2) [Array(7), Array(7)]0: (7) [120, 51, 34, 23, 12, 12, 12]1: (7) [34, 23, 45, 61, true, false, true]length: 2__proto__: Array(0)
+arr2 = [...arr,...arr1];
+(14) [120, 51, 34, 23, 12, 12, 12, 34, 23, 45, 61, true, false, true]0: 1201: 512: 343: 234: 125: 126: 127: 348: 239: 4510: 6111: true12: false13: truelength: 14__proto__: Array(0)
+arr2
+(14) [120, 51, 34, 23, 12, 12, 12, 34, 23, 45, 61, true, false, true]
+arr3 = [...arr,1020,300,240];
+(10) [120, 51, 34, 23, 12, 12, 12, 1020, 300, 240]
+var obj = {id:101,name:'Vikrant'};
+undefined
+var obj1 = {age:23,time:23.45};
+undefined
+obj2 = {obj,obj1};
+{obj: {…}, obj1: {…}}obj: {id: 101, name: "Vikrant"}obj1: {age: 23, time: 23.45}__proto__: Object
+obj2 = {...obj,...obj1};
+{id: 101, name: "Vikrant", age: 23, time: 23.45}
+obj2
+{id: 101, name: "Vikrant", age: 23, time: 23.45}id: 101name: "Vikrant"age: 23time: 23.45__proto__: Object
+obj2 = {obj,obj1};
+{obj: {…}, obj1: {…}}
+obj
+{id: 101, name: "Vikrant"}
+obj2
+{obj: {…}, obj1: {…}}obj: {id: 101, name: "Vikrant"}obj1: {age: 23, time: 23.45}__proto__: Object
+obj = [];
+[]
+obj2
+{obj: {…}, obj1: {…}}obj: {id: 101, name: "Vikrant"}obj1: {age: 23, time: 23.45}__proto__: Object
+obj ={};
+{}
+obj2
+{obj: {…}, obj1: {…}}obj: {id: 101, name: "Vikrant"}obj1: {age: 23, time: 23.45}__proto__: Object
+var temp1 ={id:101};
+undefined
+var temp2 ={name:'Hello'};
+undefined
+temp3 = {temp1,temp2};
+{temp1: {…}, temp2: {…}}temp1: {id: 101}temp2: {name: "Hello"}__proto__: Object
+temp1 = {};
+{}
+temp3
+{temp1: {…}, temp2: {…}}temp1: {id: 101}id: 101__proto__: Objecttemp2: {name: "Hello"}__proto__: Object
+temp2 = {};
+{}
+temp3
+{temp1: {…}, temp2: {…}}temp1: {id: 101}temp2: {name: "Hello"}__proto__: Object
+temp3 = {...temp1,...temp2};
+{}
+temp3
+{}__proto__: Object
+var temp1 ={id:101};
+undefined
+var temp2 ={name:'Hello'};
+undefined
+temp3 = {...temp1,...temp2};
+{id: 101, name: "Hello"}
+temp3.id
+101
+temp3.name
+"Hello"
+delete temp1;
+false
+temp1
+{id: 101}
+delete temp1.id;
+true
+temp1
+{}
+temp2
+{name: "Hello"}
+temp2 = {};
+{}
+arr
+(7) [120, 51, 34, 23, 12, 12, 12]
+arr = [];
+[]
+arr1
+(7) [34, 23, 45, 61, true, false, true]
+arr1.splice(0);
+(7) [34, 23, 45, 61, true, false, true]
+arr1
+[]
+temp2
+{}
+temp2.id = 101;
+101
+temp2
+{id: 101}
+//function Constructor
+undefined
+function Student(id,name,age){
+    this.id = id;
+    this.name = name;
+}
+undefined
+function Student(id,name,age){
+    this.id = id;
+    this.name = name;
+    this.age = age;
+}
+undefined
+var obj = new Student(101,'Vikrant',23);
+undefined
+obj
+Student {id: 101, name: "Vikrant", age: 23}id: 101name: "Vikrant"age: 23__proto__: Object
+temp1 = {id:102,name:'Hello'}
+{id: 102, name: "Hello"}
+var temp1 = new Object();
+undefined
+temp1
+{}
+temp1.id = 101,
+    
+    ;
+VM8527:3 Uncaught SyntaxError: Unexpected token ';'
+temp1.id = 101
+    
+    ;
+101
+temp1.name = 'Hello'
+"Hello"
+temp1
+{id: 101, name: "Hello"}
+//Root FUnction
+
+undefined
+Function
+ƒ Function() { [native code] }
+Object;
+ƒ Object() { [native code] }
+Object instanceof Function;
+true
+Array
+ƒ Array() { [native code] }
+Array instanceof Object;
+true
+Array instanceof Function;
+true
+arr
+[]
+arr instanceof Array;
+true
+arr instanceof Function;
+false
+Student 
+ƒ Student(id,name,age){
+    this.id = id;
+    this.name = name;
+    this.age = age;
+}
+Student  instanceof Object;
+true
+Student  instanceof Function;
+true
+obj instanceof Function;
+false
+window
+Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+temp = window.open('https://www.youtube.com');
+Window {parent: Window, opener: Window, top: Window, length: 0, frames: Window, …}
+temp = window.open('https://www.youtube.com');
+Window {parent: Window, opener: Window, top: Window, length: 0, frames: Window, …}
+temp.close();
+undefined
+Window 
+ƒ Window() { [native code] }
+Window instanceof Function;
+true
+Window instanceof Object;
+true
+window instanceof Function;
+false
+window instanceof Window;
+true
